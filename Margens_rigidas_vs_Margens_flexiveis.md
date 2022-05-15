@@ -74,9 +74,9 @@ No final das contas queremos determinar a melhor margem.
 
 Se ao final do calculo do modelo ficar determinado que o modelo encontrou uma margem muito rígida, precisaremos ajustar o hiperparametro C para tentar reduzir esta rigidez.
 
-Se o modelo estiver com a margem muito flexível, sito também poderá gerar problemas porque ele poderá classificar qualquer coisa, perdendo a capacidade de generalização.
+Se o modelo estiver com a margem muito flexível, isto também poderá gerar problemas porque ele poderá classificar qualquer coisa, perdendo a capacidade de generalização.
 
-Deve-se buscar o meio termo, que e o equilíbrio.
+Deve-se buscar o meio termo, que é o equilíbrio.
 
 
 
