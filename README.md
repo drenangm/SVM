@@ -1,10 +1,14 @@
 # SVM
+
 Funcionamento da SVM para dados linearmente separáveis
+
 
 ![image](https://user-images.githubusercontent.com/79231882/168494980-77776dfc-d2fa-4b59-a3c1-1cd8cf9be51e.png)
 
 
+
 O hiperplano é a melhor reta que separa dois grupos de dados
+
 
 ![image](https://user-images.githubusercontent.com/79231882/168495004-4cdff5ee-3538-4a67-8154-1e099280622d.png)
 
@@ -14,6 +18,7 @@ E o hiperplano é calculado a partir das margens
 ![image](https://user-images.githubusercontent.com/79231882/168495018-fd9d4009-7c50-4fe3-b09e-f95719edc9cd.png)
 
 
+
 Como encontramos as margens?
 
 Através dos support vectors, que são os pontos de dados de cada classe que estão mais próximos um do outro
@@ -21,12 +26,17 @@ Através dos support vectors, que são os pontos de dados de cada classe que est
 ![image](https://user-images.githubusercontent.com/79231882/168495027-b8f88835-60e8-4ead-a34c-60bc918ef91c.png)
 
 
+
+
 Uma dose de matemática: distancia minima entre os vetores de suporte
 
 ![image](https://user-images.githubusercontent.com/79231882/168495039-23c15b9a-eb3f-4f4f-a524-5411303463bd.png)
 
 
+
+
 Compreendendo o algoritmo:
+
 
 → X1 e X2 representam os dois dados de entrada, por exemplo, eles podem representar resultados de exames medicos, um exame de sangue (X1) e um exame de eletroencefalograma (X2)
 
@@ -64,9 +74,12 @@ Qual deve ser a distancia entre os vetores de suporte de cada classe?
 
 → Deve ser a minima possível, ou seja, o algoritmo vai percorrer todos os pontos de dados, ele vai calculando as distancias entre estes pontos e os pontos com a menor distancia ele vai coloca-los como vetores de suporte, para encontrar as margens e encontrar o hiperplano
 
+
+
 O algoritmo faz esse processo de busca e calculo das distancias utilizando a formula matemática abaixo
 
 ![image](https://user-images.githubusercontent.com/79231882/168495067-03b3760f-1cad-414b-87f8-9260702e8cda.png)
+
 
 
 O somatório colocado na formula e obtido por meio de programação quadrática
@@ -79,9 +92,11 @@ Os vetores de suporte querem a menor distancia considerando as duas classes de d
 
 Quando o modelo for olhar para novos dados ele simplesmente vai pegar aqueles pontos e coloca-los junto aos dados que correspondem a classificação aprendida por ele mas caso esta margens estejam muito próximas, pode ser que ele fique em duvida e não classifique corretamente.
 
+
 Por isso torna-se necessário aplicar a otimização, que e encontrar a maior distancia entre as margens:
 
 ![image](https://user-images.githubusercontent.com/79231882/168495071-210a7d5c-2174-4965-b9d9-73bd111bb033.png)
+
 
 
 **max alpha** na pratica tenta maximizar a distancia entre as margens
@@ -96,7 +111,9 @@ Por isso torna-se necessário aplicar a otimização, que e encontrar a maior di
 ![image](https://user-images.githubusercontent.com/79231882/168495089-9f495461-efad-4556-a7f6-41d3b993f240.png)
 
 
+
 Tudo funcionaria perfeitamente se nosso problema apresentasse dados linearmente separáveis. Mas quando temos dados não linearmente separáveis e ai que entra o Inner Product.
+
 
 ![image](https://user-images.githubusercontent.com/79231882/168495097-0d13f3df-cc49-4c36-8799-36bc9cc7670f.png)
 
